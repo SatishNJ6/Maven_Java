@@ -1,0 +1,29 @@
+1) Jenkins is a continuous integration tool which is primarily developed for Automation -> building the jars, pushing code, automated test cases
+
+2) Jenkins is used to automated everything without manual intervention(for eg: scheduling jobs at any time with help of maven cmds), 
+just need to click on 'build now'
+
+3) business people see reports and results in Jenkins, not in eclipse, if developer push code to Git, automaticaly it runs in Jenkins
+
+4) command to launch jenkins in local machine -> go to the path where jenkins is downloaded, open cmd and type below cmd
+           java -jar jenkins.war -httpPort=9090, login with admin/admin once it launches
+           
+5) configurations in jenkins before creating job, go to Manage Jenkins->Global Tool Configuration - configure all java, git and maven paths
+
+6) creating job in jenkins ->click on New Item, before that we have to place project in jenkins home directory(C:\Users\satishku\jenkins), 
+if we dont use git code- select 'use custom workspace' and give path as '${JENKINS_HOME}projectname, 
+if we use git code, then configure git url in 'source code management' in jenkins
+
+7) build periodically - to schedule jobs with cron expression 
+
+8) build- invoke top-level maven targets -> Goals = test pRegression
+
+9) post-build actions -> to configure for reports
+
+
+10) testng-results.xml is required to get reports from jenkins(path:D:\Selenium\Mavenjava\target\surefire-reports\testng-results.xml)
+
+11) To install any plugins in Jenkins -> manage jenkins->manage plugins search with req plugins
+
+12) now search with "TestNG Results Plugin", now after installing go to project configurations and select "Publis TestNG Results"
+    under "Post Build Actions".we can see graph after running multiple builds
